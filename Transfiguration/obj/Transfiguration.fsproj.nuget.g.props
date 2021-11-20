@@ -17,6 +17,8 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">C:\Users\Braden\.nuget\packages\fsharp.core\5.0.0</PkgFSharp_Core>
+    <PkgSystem_Data_SqlClient Condition=" '$(PkgSystem_Data_SqlClient)' == '' ">C:\Users\Braden\.nuget\packages\system.data.sqlclient\4.8.3</PkgSystem_Data_SqlClient>
+    <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">C:\Users\Braden\.nuget\packages\fsharp.core\6.0.1</PkgFSharp_Core>
+    <PkgDapper_FSharp Condition=" '$(PkgDapper_FSharp)' == '' ">C:\Users\Braden\.nuget\packages\dapper.fsharp\3.1.0</PkgDapper_FSharp>
   </PropertyGroup>
 </Project>

@@ -39,10 +39,20 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Dapper.FSharp": {
+              "target": "Package",
+              "version": "[3.1.0, )",
+              "generatePathProperty": true
+            },
             "FSharp.Core": {
               "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[5.0.0, )",
+              "version": "[6.0.1, )",
+              "generatePathProperty": true
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )",
               "generatePathProperty": true
             }
           },
