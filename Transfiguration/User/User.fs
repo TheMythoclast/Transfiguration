@@ -9,12 +9,7 @@ open System.Data.SqlClient
 let conn = new SqlConnection(Config.dbconn)
 conn.Open()
 
-type User = { 
-    UserID: Guid
-    FirstName: string 
-    LastName: string
-    Email: string
-}
+
 
 let UserTable = table<User>
 
@@ -33,3 +28,10 @@ let GetUser userid =
     }
     let qresult = Database.Query conn.SelectAsync<User> selectQuery
     (qresult.Result |> Seq.toList).Head 
+let UpdateUser user = 
+    let updateQuery = update { 
+        for u in UserTable do 
+        set user 
+        where (u.UserID = user.UserID)
+    }
+    Database.Query conn.UpdateAsync 

@@ -15,3 +15,9 @@ let createRow row =
         into testTable
         value row
     } |> Database.InsertQuery
+
+let testSelect rowID = select { 
+    for m in testTable do   
+        where(m.TestID = rowID)
+}
+

@@ -33,10 +33,10 @@ let DeleteQuery query =
     conn.Close() |> ignore
     result
 
-let SelectQuery query _ =
+let SelectQuery<'a> query =
     let conn = new SqlConnection (Config.dbconn)
     conn.Open() |> ignore
-    let result = query |> conn.SelectAsync<_>
+    let result = query |> conn.SelectAsync<'a>
     conn.Close() |> ignore
     result
     
