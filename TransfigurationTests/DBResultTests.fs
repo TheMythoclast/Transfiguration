@@ -27,7 +27,7 @@ let AssertDatabaseError (result: ActionResult<'a>) =
     match result with 
         | DatabaseError (x, y) -> Assert.Pass()
         | _ -> Assert.Fail()
-
+        
 let AssertEmpty (result: ActionResult<'a>) =
     ParseResults result
     match result with 

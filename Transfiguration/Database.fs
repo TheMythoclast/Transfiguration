@@ -31,8 +31,9 @@ let DeleteQuery query =
     let conn = new SqlConnection (Config.dbconn)
     conn.Open() |> ignore
     let result = query |> conn.DeleteAsync
+    let a = result.Result
     conn.Close() |> ignore
-    result
+    OperationSuccess a
 
 let SelectQuery<'a> query =
     let conn = new SqlConnection (Config.dbconn)

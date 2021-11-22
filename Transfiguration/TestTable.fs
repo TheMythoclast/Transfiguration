@@ -26,3 +26,6 @@ let testSelect rowID = select {
 let getTests = select { 
     for m in testTable do 
         selectAll } |> Database.SelectQuery<TestRow>
+let DeleteTest id = delete { 
+    for m in testTable do 
+        where(m.TestID = id) } |> Database.DeleteQuery
