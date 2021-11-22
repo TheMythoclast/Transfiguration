@@ -5,7 +5,6 @@ open System.Data.SqlClient
 open Dapper.FSharp
 open Dapper.FSharp.MSSQL
 
-// Not sure if I am going to use this.
 let Query qtype query = 
     let conn = new SqlConnection (Config.dbconn)
     conn.OpenAsync() |> ignore
@@ -24,8 +23,9 @@ let InsertQuery query =
     let conn = new SqlConnection (Config.dbconn)
     conn.Open() |> ignore
     let result = query |> conn.InsertAsync
+    let q = result.Result
     conn.Close() |> ignore
-    result
+    OperationSuccess q 
 
 let DeleteQuery query =
     let conn = new SqlConnection (Config.dbconn)
@@ -45,6 +45,10 @@ let SelectQuery<'a> query =
     else 
         OperationSuccess result
 
+ 
+
     
     
+    
+  
     

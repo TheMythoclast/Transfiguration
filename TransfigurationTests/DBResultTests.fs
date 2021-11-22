@@ -13,7 +13,7 @@ let ParseResults (result: ActionResult<'a>) =
         | DatabaseError (errorname, errortext) -> (printfn "%s: %s"  errorname errortext)
         | ValidationError x ->  List.iter (fun (field, errormessage) -> printfn "%s: %s"  field errormessage) x
         | EmptyResult -> printfn "Empty Result"
-        | OperationSuccess x -> printfn "Operation Success"
+        | OperationSuccess x -> printfn "%O" x
 
 let AssertValidationError (result: ActionResult<'a>) =
     ParseResults result

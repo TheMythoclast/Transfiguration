@@ -13,3 +13,12 @@ let ``Random UID Should Return Empty `` () =
 [<Test>]
 let ``TestTable Should Return Results `` () = 
     getTests |> AssertSuccess
+
+[<Test>]
+let ``Should be created and findable`` () = 
+    let newrow = { TestID = Guid.NewGuid(); SomeColumn = "T"}
+    let rowid = newrow.TestID
+    createRow newrow |> ignore
+    (GetTestRowByID rowid) |> AssertSuccess
+
+    
