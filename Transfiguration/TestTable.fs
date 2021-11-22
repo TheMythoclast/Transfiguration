@@ -18,6 +18,8 @@ let createRow row =
 
 let testSelect rowID = select { 
     for m in testTable do   
-        where(m.TestID = rowID)
-}
+        where(m.TestID = rowID) } |> Database.SelectQuery<TestRow>
 
+let getTests = select { 
+    for m in testTable do 
+        selectAll } |> Database.SelectQuery<TestRow>

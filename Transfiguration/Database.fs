@@ -12,6 +12,7 @@ let Query qtype query =
     let result = query |> qtype
     conn.CloseAsync() |> ignore
     result
+
 let UpdateQuery query = 
     let conn = new SqlConnection (Config.dbconn)
     conn.OpenAsync() |> ignore
@@ -36,7 +37,14 @@ let DeleteQuery query =
 let SelectQuery<'a> query =
     let conn = new SqlConnection (Config.dbconn)
     conn.Open() |> ignore
-    let result = query |> conn.SelectAsync<'a>
+    let qresult = query |> conn.SelectAsync<'a>
+    let result = qresult.Result |> Seq.toList
     conn.Close() |> ignore
-    result
+    if result.IsEmpty then
+        EmptyResult
+    else 
+        OperationSuccess result
+
+    
+    
     

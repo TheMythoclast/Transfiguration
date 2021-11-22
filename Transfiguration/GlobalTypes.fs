@@ -60,5 +60,5 @@ type Applicant = {
     LastName: string
 }
 
-type ActionResult<'a> = DatabaseError of string * string | ValidationError of string * string | OperationSuccess of 'a
+type ActionResult<'a> = DatabaseError of string * string | ValidationError of (string * string) list | OperationSuccess of 'a | EmptyResult
 
