@@ -29,3 +29,8 @@ let getTests = select {
 let DeleteTest id = delete { 
     for m in testTable do 
         where(m.TestID = id) } |> Database.DeleteQuery
+
+let UpdateTest row = update { 
+    for p in testTable do 
+        set row 
+        where(p.TestID = row.TestID)} |> Database.UpdateQuery

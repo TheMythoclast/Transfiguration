@@ -3,11 +3,8 @@ open Authentication
 open Database
 open Dapper.FSharp
 open Dapper.FSharp.MSSQL
-open System
-open System.Data.SqlClient
 
-let conn = new SqlConnection(Config.dbconn)
-conn.Open()
+
 
 
 
@@ -18,20 +15,26 @@ let insertUser user =
         into UserTable
         value user
     }
-    Database.Query conn.InsertAsync insertQuery 
-    ()
+    insertQuery |> Database.InsertQuery
 
 let GetUser userid = 
     let selectQuery = select { 
         for u in UserTable do 
             where(u.UserID = userid)
     }
-    let qresult = Database.Query conn.SelectAsync<User> selectQuery
-    (qresult.Result |> Seq.toList).Head 
+    selectQuery |> Database.SelectQuery
+    
 let UpdateUser user = 
     let updateQuery = update { 
         for u in UserTable do 
         set user 
         where (u.UserID = user.UserID)
     }
-    Database.Query conn.UpdateAsync 
+    updateQuery |> Database.UpdateQuery
+    
+let DeleteUser user = 
+    let deleteQuery = delete { 
+        for u in UserTable do 
+            where(u.UserID = user.UserID)
+    }
+    deleteQuery |> Database.DeleteQuery

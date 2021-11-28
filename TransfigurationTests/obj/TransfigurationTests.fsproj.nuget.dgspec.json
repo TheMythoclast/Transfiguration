@@ -46,27 +46,29 @@
             "FSharp.Core": {
               "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[5.0.0, )",
+              "version": "[6.0.1, )",
               "generatePathProperty": true
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.9.4, )",
+              "version": "[17.0.0, )",
               "generatePathProperty": true
             },
             "NUnit": {
               "target": "Package",
-              "version": "[3.13.1, )",
+              "version": "[3.13.2, )",
               "generatePathProperty": true
             },
             "NUnit3TestAdapter": {
               "target": "Package",
-              "version": "[3.17.0, )",
+              "version": "[4.1.0, )",
               "generatePathProperty": true
             },
             "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.0.2, )",
+              "version": "[3.1.0, )",
               "generatePathProperty": true
             }
           },

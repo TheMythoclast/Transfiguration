@@ -32,3 +32,11 @@ let ``X Delete Shouldn't Fail`` () =
 [<Test>]
 let ``Z Deleted Row Shouldn't Be In DB`` () = 
     GetTestRowByID id |> AssertEmpty
+
+[<Test>]
+let ``Row should update properly`` () = 
+    let id = Guid.NewGuid();
+    let row = { TestID = id; SomeColumn = "Test"} 
+    createRow row 
+    UpdateTest { TestID = id; SomeColumn = "Braden"}
+    GetTestRowByID id |> AssertSuccess

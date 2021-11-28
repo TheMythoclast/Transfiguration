@@ -23,7 +23,6 @@ C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\bin\Debug\net5
 C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\bin\Debug\net5.0\Dapper.FSharp.dll
 C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\bin\Debug\net5.0\FSharp.Core.dll
 C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\bin\Debug\net5.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
-C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\bin\Debug\net5.0\Microsoft.DotNet.InternalAbstractions.dll
 C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\bin\Debug\net5.0\Microsoft.TestPlatform.CoreUtilities.dll
 C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
 C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\bin\Debug\net5.0\Microsoft.TestPlatform.CommunicationUtilities.dll
@@ -34,7 +33,6 @@ C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\bin\Debug\net5
 C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\bin\Debug\net5.0\NuGet.Frameworks.dll
 C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\bin\Debug\net5.0\nunit.framework.dll
 C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\bin\Debug\net5.0\System.Data.SqlClient.dll
-C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\bin\Debug\net5.0\System.Xml.XPath.XmlDocument.dll
 C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\bin\Debug\net5.0\cs\FSharp.Core.resources.dll
 C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\bin\Debug\net5.0\de\FSharp.Core.resources.dll
 C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\bin\Debug\net5.0\es\FSharp.Core.resources.dll
@@ -124,3 +122,4 @@ C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\obj\Debug\net5
 C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\obj\Debug\net5.0\TransfigurationTests.dll
 C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\obj\Debug\net5.0\TransfigurationTests.pdb
 C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\obj\Debug\net5.0\TransfigurationTests.genruntimeconfig.cache
+C:\Users\Braden\source\repos\Transfiguration\TransfigurationTests\bin\Debug\net5.0\testcentric.engine.metadata.dll

@@ -2,6 +2,9 @@
 module GlobalTypes
 open System
 
+//fuck I am lazy. 
+let id () = 
+    Guid.NewGuid()
 //This file contains all of the types for the domain. 
 type Authentication = {
     AuthenticationType: string 

@@ -47,8 +47,6 @@ let SelectQuery<'a> query =
         OperationSuccess result
 
  
-
-    
     
     
   

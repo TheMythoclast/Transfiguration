@@ -6,7 +6,7 @@ open NUnit.Framework
 
 let PrintError ((a,b): string * string) = 
     printf "%s: %s \n" <| a, b 
-    ()
+    
 
 let ParseResults (result: ActionResult<'a>) = 
     match result with 
