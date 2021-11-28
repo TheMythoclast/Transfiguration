@@ -10,7 +10,11 @@ open Dapper.FSharp.MSSQL
 
 let UserTable = table<User>
 
-let insertUser user = 
+
+
+//There will need to be some validation here. 
+
+let InsertUser user = 
     let insertQuery = insert { 
         into UserTable
         value user
