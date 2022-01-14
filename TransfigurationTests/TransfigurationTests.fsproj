@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="AuthorizationTests.fs" />
     <Compile Include="DBResultTests.fs" />
     <Compile Include="AuthTests.fs" />
 

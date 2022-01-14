@@ -1,4 +1,5 @@
-﻿module Database
+﻿[<AutoOpen>]
+module Database
 open Config
 open System.Data
 open System.Data.SqlClient

@@ -42,6 +42,7 @@ type CycleParticipant = {
 
 }
 type Application = {
+    ApplicationID: Guid
     ApplicantID: Guid
     CycleParticipantID: Guid
 

@@ -7,15 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    
     <Compile Include="Config.fs" />
     
     
     <Compile Include="GlobalTypes.fs" />
     <Compile Include="Database.fs" />
+    
     <Compile Include="TestTable.fs" />
     <Compile Include="User\Authorization.fs" />
     <Compile Include="User\Authentication.fs" />
-
+    <Compile Include="Applicant\Application.fs" />
+    <Compile Include="Applicant\Applicant.fs" />
+    <Compile Include="Program\Specialty.fs" />
+    <Compile Include="Program\ResProgram.fs" />
     <Compile Include="User\User.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
@@ -27,11 +32,6 @@
 
   <ItemGroup>
     <PackageReference Update="FSharp.Core" Version="6.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Applicant\" />
-    <Folder Include="Program\" />
   </ItemGroup>
 
 </Project>

@@ -14,7 +14,7 @@ let UserTable = table<User>
 
 //There will need to be some validation here. 
 
-let InsertUser user = 
+let CreateUser user = 
     let insertQuery = insert { 
         into UserTable
         value user
